@@ -1,10 +1,3 @@
-
-
-
-## Tasks
-
-* [ ] Task number 1
-
 ## The Problem
 
 Briefly describe the issue you are experiencing (or the feature you want to see added to Project). Tell us what you were trying to do and what happened instead. Remember, this is _not_ a place to ask questions.
@@ -38,7 +31,6 @@ If you are reporting a bug, _always_ include Project logs!
 ### What is the expected correct behavior?
 
 (What you should see instead)
-
 
 /label ~bug ~reproduced ~needs-investigation ~backlog
 /cc @luismayta
