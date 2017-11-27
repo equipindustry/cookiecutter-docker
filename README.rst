@@ -106,7 +106,7 @@ Made with :heart: :coffee: and :pizza: by `OSP <https://git.osp.pe>`__.
 
 .. Links
 
-.. _`All Contributors`: AUTHORS
+.. _`All Contributors`: AUTHORS.rst
 .. _`python`: https://www.python.org
 .. _`docker`: https://www.docker.io
 .. _`docker compose`: https://docs.docker.com/compose
