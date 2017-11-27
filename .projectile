@@ -1,0 +1,12 @@
+-/log
+-/tmp
+-/.git
+-/.vagrant
+-/vendor
+-/auto-save-list
+-*.cache
+-/docs/build
+-GPATH
+-GRTAGS
+-GTAGS
+-projectile-bookmarks.eld
