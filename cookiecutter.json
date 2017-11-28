@@ -1,0 +1,14 @@
+{
+  "company": "OSP",
+  "email": "slovacus@gmail.com",
+  "full_name": "Luis Mayta",
+  "github_author": "https://github.com/luismayta",
+  "license": "Mit",
+  "project_name": "name of project",
+  "release_date": "2017-11-17",
+  "repo_name": "docker-name",
+  "short_description": "Docker Image Name",
+  "user": "osp",
+  "version": "0.0.0",
+  "year": "2017"
+}
