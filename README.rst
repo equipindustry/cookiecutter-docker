@@ -75,6 +75,7 @@ Other commands for developing are written in Makefile:
 
         Tests:
 
+            test                       Run all test
             test.lint                  Run all pre-commit
             test.syntax                Run all syntax in code
 
