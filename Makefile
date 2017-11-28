@@ -55,6 +55,7 @@ help:
 	@echo ''
 	@echo '    Tests:'
 	@echo ''
+	@echo '        test                       Run all test'
 	@echo '        test.lint                  Run all pre-commit'
 	@echo '        test.syntax                Run all syntax in code'
 	@echo ''
