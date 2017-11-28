@@ -1,0 +1,16 @@
+# cookiecutter-docker: Docker Compose
+# https://docs.docker.com/compose/
+#
+# Usage: docker-compose up
+version: '3'
+services:
+  app:
+    restart: always
+    image: python:3.6.1
+    build:
+      context: .
+      dockerfile: provision/docker/app/Dockerfile
+    volumes:
+      - .:/usr/src/
+    env_file:
+      - .env
