@@ -13,7 +13,8 @@
         files: ^tf|-|\.(py|env|yml|yaml)$
     -   id: check-case-conflict
     -   id: check-json
-        language_version: python3
+    -   id: pretty-format-json
+        args: ['--autofix']
     -   id: check-xml
         language_version: python3
     -   id: check-yaml
@@ -30,7 +31,6 @@
         language_version: python3
     -   id: double-quote-string-fixer
     -   id: check-docstring-first
-    -   id: pretty-format-json
     -   id: detect-aws-credentials
     -   id: requirements-txt-fixer
     -   id: check-symlinks
