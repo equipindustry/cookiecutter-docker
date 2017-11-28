@@ -1,5 +1,6 @@
 # Docker
 .PHONY: docker.build docker.test docker.pkg
+PATH_DOCKER_COMPOSE:=provision/docker-compose
 
 DOCKER_NETWORK = $(PROJECT_NAME)_network
 
@@ -7,7 +8,7 @@ docker.run: clean
 	@if [ "${env}" == "" ]; then \
 		docker-compose run --rm --service-ports "${service}" bash; \
 	else \
-		docker-compose -f docker-compose.yml -f docker-compose/"${env}".yml run --rm --service-ports "${service}" bash; \
+		docker-compose -f docker-compose.yml -f "${PATH_DOCKER_COMPOSE}"/"${env}".yml run --rm --service-ports "${service}" bash; \
 	fi
 
 docker.build: clean
@@ -15,7 +16,7 @@ docker.build: clean
 	@if [ "${env}" == "" ]; then \
 		docker-compose build --pull --no-cache; \
 	else \
-		docker-compose -f docker-compose.yml -f docker-compose/"${env}".yml build --pull --no-cache; \
+		docker-compose -f docker-compose.yml -f "${PATH_DOCKER_COMPOSE}"/"${env}".yml build --pull --no-cache; \
 	fi
 
 docker.down: clean
@@ -23,7 +24,7 @@ docker.down: clean
 	@if [ "${env}" == "" ]; then \
 		docker-compose -p "${PROJECT_NAME}" down --remove-orphans; \
 	else \
-		docker-compose -f docker-compose.yml -f docker-compose/"${env}".yml down --remove-orphans; \
+		docker-compose -f docker-compose.yml -f "${PATH_DOCKER_COMPOSE}"/"${env}".yml down --remove-orphans; \
 	fi
 
 docker.ssh: clean
@@ -34,7 +35,7 @@ docker.stop: clean
 	@if [ "${env}" == "" ]; then \
 		docker-compose -p "${PROJECT_NAME}" stop; \
 	else \
-		docker-compose -f docker-compose.yml -f docker-compose/"${env}".yml stop; \
+		docker-compose -f docker-compose.yml -f "${PATH_DOCKER_COMPOSE}"/"${env}".yml stop; \
 	fi
 
 docker.verify_network: ## Verify network
@@ -47,7 +48,7 @@ docker.up: clean
 	@if [ "${env}" == "" ]; then \
 		docker-compose -p "${PROJECT_NAME}" up --remove-orphans; \
 	else \
-		docker-compose -f docker-compose.yml -f docker-compose/"${env}".yml up --remove-orphans; \
+		docker-compose -f docker-compose.yml -f "${PATH_DOCKER_COMPOSE}"/"${env}".yml up --remove-orphans; \
 	fi
 
 docker.list: clean
@@ -55,5 +56,5 @@ docker.list: clean
 	@if [ "${env}" == "" ]; then \
 		docker-compose -p "${PROJECT_NAME_DEV}" ps; \
 	else \
-		docker-compose -f docker-compose.yml -f docker-compose/"${env}".yml ps; \
+		docker-compose -f docker-compose.yml -f "${PATH_DOCKER_COMPOSE}"/"${env}".yml ps; \
 	fi
