@@ -1,0 +1,25 @@
+version = '{{cookiecutter.version}}'
+
+[[files."CHANGELOG.rst"]]
+search = """
+`Unreleased`_
+*************
+"""
+
+{% raw %}
+replace = """
+`Unreleased`_
+*************
+
+`{{new_version}}`_ - {{utcnow | strftime('%Y-%m-%d')}}
+********************
+"""
+{% endraw %}
+[[files."CHANGELOG.rst"]]
+search = """
+.. _`Unreleased`: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}/compare/{{ "{{" }}old_version{{ "}}" }}...HEAD
+"""
+replace = """
+.. _`Unreleased`: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}/compare/{{ "{{" }}new_version{{ "}}" }}...HEAD
+.. _`{{ "{{" }}new_version{{ "}}" }}`: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}/compare/{{ "{{" }}old_version{{ "}}" }}...{{ "{{" }}new_version{{ "}}" }}
+"""
