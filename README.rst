@@ -1,6 +1,6 @@
 |Build| |Issues| |License|
 
-:Version: 0.0.0
+:Version: 1.0.0
 :Web: https://git.osp.pe/Templates/cookiecutter-docker
 :Download: https://git.osp.pe/Templates/cookiecutter-docker
 :Source: https://git.ops.pe/Templates/cookiecutter-docker
