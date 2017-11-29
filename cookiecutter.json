@@ -1,8 +1,10 @@
 {
   "company": "OSP",
+  "domain_repository": "https://git.osp.pe",
   "email": "slovacus@gmail.com",
   "full_name": "Luis Mayta",
   "github_author": "https://github.com/luismayta",
+  "group_name": "osp",
   "license": "Mit",
   "project_name": "name of project",
   "release_date": "2017-11-17",
