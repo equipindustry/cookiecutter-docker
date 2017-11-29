@@ -35,4 +35,4 @@ Submit bug reports or feature requests
 
 Just use the GitHub issue tracker to submit your bug reports and feature
 requests. If you are submitting a bug report, please follow the `issue
-template <https://github.com/luismayta/emacs.d/issues/new>`__.
+template <https://git.osp.pe/Templates/Cookiecutter-docker/issues/new>`__.
