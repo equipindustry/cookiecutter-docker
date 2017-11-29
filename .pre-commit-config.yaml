@@ -18,7 +18,7 @@
     -   id: check-xml
         language_version: python3
     -   id: check-yaml
-        language_version: python3
+        exclude: ^{{cookiecutter.repo_name}}/.tmuxinator.yml$
     -   id: check-case-conflict
     -   id: check-byte-order-marker
     -   id: check-ast
