@@ -17,9 +17,9 @@ replace = """
 {% endraw %}
 [[files."CHANGELOG.rst"]]
 search = """
-.. _`Unreleased`: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}/compare/{{ "{{" }}old_version{{ "}}" }}...HEAD
+.. _`Unreleased`: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}/compare/{{ "{{" }}old_version{{ "}}" }}...HEAD
 """
 replace = """
-.. _`Unreleased`: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}/compare/{{ "{{" }}new_version{{ "}}" }}...HEAD
-.. _`{{ "{{" }}new_version{{ "}}" }}`: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}/compare/{{ "{{" }}old_version{{ "}}" }}...{{ "{{" }}new_version{{ "}}" }}
+.. _`Unreleased`: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}/compare/{{ "{{" }}new_version{{ "}}" }}...HEAD
+.. _`{{ "{{" }}new_version{{ "}}" }}`: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}/compare/{{ "{{" }}old_version{{ "}}" }}...{{ "{{" }}new_version{{ "}}" }}
 """

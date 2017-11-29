@@ -7,5 +7,5 @@ This file uses change log convention from `keep a CHANGELOG`_.
 `Unreleased`_
 *************
 
-.. _`Unreleased`: https://github.com/{{cookiecutter.user}}/{{cookiecutter.repo_name}}/compare/0.0.1...HEAD
+.. _`Unreleased`: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}/compare/0.0.1...HEAD
 .. _`keep a CHANGELOG`: http://keepachangelog.com/en/0.3.0/

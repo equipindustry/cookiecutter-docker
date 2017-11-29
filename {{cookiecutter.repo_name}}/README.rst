@@ -2,9 +2,9 @@
 
 
 :Version: {{cookiecutter.version}}
-:Web: https://github.com/{{cookiecutter.user}}/{{cookiecutter.repo_name}}
-:Download: https://github.com/{{cookiecutter.user}}/{{cookiecutter.repo_name}}
-:Source: https://github.com/{{cookiecutter.user}}/{{cookiecutter.repo_name}}
+:Web: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}
+:Download: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}
+:Source: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}
 :Keywords: {{cookiecutter.project_name}}
 
 
@@ -72,14 +72,14 @@ Please see `CONTRIBUTING <CONTRIBUTING.rst>`__ for details.
 Credits
 -------
 
-Made with :heart: :coffee: and :pizza: by `{{cookiecutter.company}} <https://git.osp.pe/{{cookiecutter.company}}>`__
+Made with :heart: :coffee: and :pizza: by `{{cookiecutter.company}} <{{cookiecutter.domain_repository}}/{{cookiecutter.company}}>`__
 
 -  `All Contributors`_
 
-.. |Build| image:: https://travis-ci.org/{{cookiecutter.user}}/{{cookiecutter.repo_name}}.svg
-   :target: https://travis-ci.org/{{cookiecutter.user}}/{{cookiecutter.repo_name}}
-.. |Issues| image:: https://img.shields.io/git.osp.pe/issues/{{cookiecutter.user}}/{{cookiecutter.repo_name}}.svg
-   :target: https://git.osp.pe/{{cookiecutter.user}}/{{cookiecutter.repo_name}}/issues
+.. |Build| image:: https://travis-ci.org/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}.svg
+   :target: https://travis-ci.org/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}
+.. |Issues| image:: https://img.shields.io/git.osp.pe/issues/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}.svg
+   :target: https://git.osp.pe/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}/issues
 .. |License| image:: https://img.shields.io/git.osp.pe/license/mashape/apistatus.svg?style=flat-square
    :target: LICENSE
 
