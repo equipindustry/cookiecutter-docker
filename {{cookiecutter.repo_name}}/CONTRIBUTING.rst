@@ -35,4 +35,4 @@ Submit bug reports or feature requests
 
 Just use the GitHub issue tracker to submit your bug reports and feature
 requests. If you are submitting a bug report, please follow the `issue
-template <{{cookiecutter.domain_repository}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}/issues/new>`__.
+template <{{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}/issues/new>`__.
