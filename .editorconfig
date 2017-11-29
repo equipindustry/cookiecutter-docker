@@ -19,10 +19,6 @@ charset = utf-8
 [*.{el}]
 insert_final_newline = false
 
-[*.{el,json,md}]
-indent_style = space
-indent_size = 2
-
 # 4 space indentation
 [*.{py,yml}]
 indent_style = space
@@ -33,7 +29,7 @@ indent_size = 4
 indent_style = tab
 
 # Indentation override for all JS under lib directory
-[*.{js,json,yml}]
+[*.{el,js,json,md}]
 indent_style = space
 indent_size = 2
 
