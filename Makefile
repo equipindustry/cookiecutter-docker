@@ -2,19 +2,15 @@
 # See ./CONTRIBUTING.rst
 #
 
-TAG :=""
-END :=""
-
+OS := $(shell uname)
 .PHONY: help build up requirements clean lint test help
 .DEFAULT_GOAL := help
 
-PROJECT_NAME := cookiecutter-docker
-PROJECT_NAME_DEV := $(PROJECT_NAME)_dev
-PROJECT_NAME_STAGE := $(PROJECT_NAME)_stage
-PROJECT_NAME_TEST := $(PROJECT_NAME)_test
+PROJECT := cookiecutter-docker
+PROJECT_PORT := 8000
 
-PYTHON_VERSION=3.6.1
-PYENV_NAME="${PROJECT_NAME}"
+PYTHON_VERSION=3.6.4
+PYENV_NAME="${PROJECT}"
 
 # Configuration.
 SHELL := /bin/bash
@@ -22,67 +18,54 @@ ROOT_DIR=$(shell pwd)
 MESSAGE:=༼ つ ◕_◕ ༽つ
 MESSAGE_HAPPY:="${MESSAGE} Happy Coding"
 SOURCE_DIR=$(ROOT_DIR)/
-REQUIREMENTS_DIR=$(ROOT_DIR)/requirements/
-FILE_README=$(ROOT_DIR)/README.rst
+REQUIREMENTS_DIR=$(ROOT_DIR)/requirements
+PROVISION_DIR:=$(ROOT_DIR)/provision
+FILE_README:=$(ROOT_DIR)/README.rst
+PATH_DOCKER_COMPOSE:=provision/docker-compose
 
-include *.mk
+pip_install := pip install -r
+docker-compose:=docker-compose -f docker-compose.yml
+
+include extras/make/*.mk
 
 help:
-	@echo '${MESSAGE} Makefile for ${PROJECT_NAME}'
+	@echo '${MESSAGE} Makefile for ${PROJECT}'
 	@echo ''
 	@echo 'Usage:'
 	@echo '    environment               create environment with pyenv'
-	@echo '    install                   install dependences python by env'
 	@echo '    clean                     remove files of build'
 	@echo '    setup                     install requirements'
 	@echo ''
-	@echo '    Docker:'
-	@echo ''
-	@echo '        docker.build         build all services with docker-compose'
-	@echo '        docker.down          down services docker-compose'
-	@echo '        docker.ssh           connect by ssh to container'
-	@echo '        docker.stop          stop services by env'
-	@echo '        docker.verify_network           verify network'
-	@echo '        docker.up             up services of docker-compose'
-	@echo '        docker.run            run {service} {env}'
-	@echo '        docker.list           list services of docker'
-	@echo ''
-	@echo '    Docs:'
-	@echo ''
-	@echo '        docs.show                  Show restview README'
-	@echo '        docs.make.html             Make documentation html'
-	@echo '        docs.make.pdf              Make documentation pdf'
-	@echo ''
-	@echo '    Tests:'
-	@echo ''
-	@echo '        test                       Run all test'
-	@echo '        test.lint                  Run all pre-commit'
-	@echo '        test.syntax                Run all syntax in code'
-	@echo ''
+	@make alias.help
+	@make docker.help
+	@make docs.help
+	@make test.help
 
 clean:
 	@echo "$(TAG)"Cleaning up"$(END)"
+ifneq (Darwin,$(OS))
+	@sudo rm -rf .tox *.egg dist build .coverage
+	@sudo rm -rf docs/build
+	@sudo find . -name '__pycache__' -delete -print -o -name '*.pyc' -delete -print -o -name '*.tmp' -delete -print
+else
 	@rm -rf .tox *.egg dist build .coverage
+	@rm -rf docs/build
 	@find . -name '__pycache__' -delete -print -o -name '*.pyc' -delete -print -o -name '*.tmp' -delete -print
+endif
 	@echo
 
 setup: clean
-	pip install -r "${REQUIREMENTS_DIR}/setup.txt"
+	$(pip_install) "${REQUIREMENTS_DIR}/setup.txt"
 	pre-commit install
-	cp -rf .env-sample .env
+	cp -rf .hooks/prepare-commit-msg .git/hooks/
+	@if [ ! -e ".env" ]; then \
+		cp -rf .env-sample .env;\
+	fi
 
 environment: clean
 	@if [ -e "$(HOME)/.pyenv" ]; then \
 		eval "$(pyenv init -)"; \
 		eval "$(pyenv virtualenv-init -)"; \
 	fi
-	pyenv virtualenv "${PYTHON_VERSION}" "${PYENV_NAME}" >> /dev/null 2>&1 || echo 'Oh Yeah!!'
-	pyenv activate "${PYENV_NAME}" >> /dev/null 2>&1 || echo 'Oh Yeah!!'
-
-install: clean
-	@echo $(MESSAGE) "Deployment environment: ${env}"
-	@if [ "${env}" == "" ]; then \
-		pip install -r requirements.txt; \
-	else \
-		pip install -r "${REQUIREMENTS_DIR}/${env}.txt"; \
-	fi
+	pyenv virtualenv "${PYTHON_VERSION}" "${PYENV_NAME}" >> /dev/null 2>&1 || echo $(MESSAGE_HAPPY)
+	pyenv activate "${PYENV_NAME}" >> /dev/null 2>&1 || echo $(MESSAGE_HAPPY)
