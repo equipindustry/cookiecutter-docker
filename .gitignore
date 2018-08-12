@@ -5,9 +5,6 @@ src/assets/
 static/
 staticfiles/
 
-# gulp-compass metafile
-css
-
 # Node metadata
 node_modules
 
@@ -100,17 +97,11 @@ provision/ansible/roles/contrib
 
 .autoenv.zsh*.retry
 *.retry
-.wercker/
+.wercker
 dumps
+
+.DS_Store
 *.retry
-;
 .terraform
-.backup
-*.backup
-*.tfstate
-terraform.tfstate.d
-*.out
-*.log
-*.aux
-*.pdf
-*.zip
+.mypy_cache
+;
