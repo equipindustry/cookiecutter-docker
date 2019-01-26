@@ -39,6 +39,7 @@ help:
 	@make docker.help
 	@make docs.help
 	@make test.help
+	@make pytest.help
 
 clean:
 	@echo "$(TAG)"Cleaning up"$(END)"
