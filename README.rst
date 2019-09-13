@@ -20,9 +20,25 @@ Features
 Dependencies
 ------------
 
+List of applications:
+
+- `Pyenv`_
+- `Docker`_
+- `Docker Compose`_
+
+Quick Start
+===========
+
+- Fork this repository
+
+Usage
+-----
+
+- Install dependences
+
 .. code-block:: bash
 
-   $ make setup
+  λ make setup
 
 Support
 -------
@@ -114,3 +130,9 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
    :target: https://github.com/hadenlabs/cookiecutter-docker
 .. |made| image:: https://img.shields.io/badge/Made%20with-Python-1f425f.svg
    :target: http://www.python.org
+
+.. Dependences:
+
+.. _Pyenv: https://github.com/pyenv/pyenv
+.. _Docker: https://www.docker.com/
+.. _Docker Compose: https://docs.docker.com/compose/
