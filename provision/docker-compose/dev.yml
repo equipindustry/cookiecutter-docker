@@ -1,7 +1,7 @@
 # Docker Compose
 # https://docs.docker.com/compose/
 
-version: "3"
+version: "3.6"
 services:
   # Python
   app:
@@ -11,6 +11,7 @@ services:
     build:
       args:
         stage: dev
+
 
   check:
     image: cookiecutter-docker-check-dev
