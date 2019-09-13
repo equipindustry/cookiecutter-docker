@@ -1,9 +1,7 @@
-Slides Agile
-============
+Cookiecutter Docker
+===================
 
-|gitpitch| |build_status| |code_climate| |github_tag| |test_coverage| |license|
-
-Slides Agile
+|Build Status| |GitHub issues| |GitHub license|
 
 :Version: 0.0.0
 :Web: https://github.com/hadenlabs/cookiecutter-docker
@@ -14,80 +12,105 @@ Slides Agile
 .. contents:: Table of Contents:
     :local:
 
-Requirements
+Features
+--------
+
+* Task
+
+Dependencies
 ------------
 
 .. code-block:: bash
 
    $ make setup
 
-Actions Makefile
-----------------
+Support
+-------
+
+If you want to support this project, i only accept ``IOTA`` :p.
 
 .. code-block:: bash
 
-  λ make
-      ༼ つ ◕_◕ ༽つ Makefile for Cookiecutter docker
+    Address: FTDCZELEMOQGL9MBWFZENJLFIZUBGMXLFVPRB9HTWYDYPTFKASJCEGJMSAXUWDQC9SJUDMZVIQKACQEEYPEUYLAMMD
 
-      Usage:
-          make environment               create environment with pyenv
-          make install                   install dependences python by env
-          make clean                     remove files of build
-          make setup                     install requirements
 
-          Docker:
+Team
+----
 
-              make docker.build         build all services with docker-compose
-              make docker.down          down services docker-compose
-              make docker.ssh           connect by ssh to container
-              make docker.stop          stop services by env
-              make docker.verify_network           verify network
-              make docker.up             up services of docker-compose
-              make docker.list           list services of docker
++---------------+
+| |Luis Mayta|  |
++---------------+
+| `luis mayta`_ |
++---------------+
 
-          Tests:
+License
+-------
 
-              test.lint                  Run all pre-commit
-              test.syntax                Run all syntax in code
+MIT
 
 Changelog
 ---------
 
-Please see `CHANGELOG <CHANGELOG.rst>`__ for more information what has
-changed recently.
+Please see `CHANGELOG`_ for more information what
+has changed recently.
 
 Contributing
 ------------
 
-Please see `CONTRIBUTING <CONTRIBUTING.rst>`__ for details.
+Contributions are welcome!
 
-Credits
--------
+Review the `CONTRIBUTING`_ for details on how to:
 
-Made with :heart: :coffee: and :pizza: by `hadenlabs <https://github.com/hadenlabs>`__
+* Submit issues
+* Submit pull requests
 
--  `All Contributors <AUTHORS>`__
+Contact Info
+------------
 
-.. |code_climate| image:: https://codeclimate.com/github/hadenlabs/cookiecutter-docker/badges/gpa.svg
-  :target: https://codeclimate.com/github/hadenlabs/cookiecutter-docker
-  :alt: Code Climate
+Feel free to contact me to discuss any issues, questions, or comments.
 
-.. |github_tag| image:: https://img.shields.io/github/tag/hadenlabs/cookiecutter-docker.svg?maxAge=2592000
-  :target: https://github.com/hadenlabs/cookiecutter-docker
-  :alt: Github Tag
+* `Email`_
+* `Twitter`_
+* `GitHub`_
+* `LinkedIn`_
+* `Website`_
+* `PGP`_
 
-.. |build_status| image:: https://travis-ci.org/hadenlabs/cookiecutter-docker.svg
-  :target: https://travis-ci.org/hadenlabs/cookiecutter-docker
-  :alt: Build Status Tag
+|linkedin| |beacon| |made|
 
-.. |gitpitch| image:: https://gitpitch.com/assets/badge.svg
-  :target: https://gitpitch.com/hadenlabs/cookiecutter-docker?grs=github&t=white
-  :alt: GitPitch
+Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 
-.. |license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
-  :target: LICENSE
-  :alt: License
+.. Links
+.. _`changelog`: CHANGELOG.rst
+.. _`contributors`: AUTHORS
+.. _`contributing`: CONTRIBUTING.rst
 
-.. |test_coverage| image:: https://codeclimate.com/github/hadenlabs/cookiecutter-docker/badges/coverage.svg
-  :target: https://codeclimate.com/github/hadenlabs/cookiecutter-docker/coverage
-  :alt: Test Coverage
+.. _`hadenlabs`: https://github.com/hadenlabs
+.. _`luis mayta`: https://github.com/luismayta
+
+.. _`Github`: https://github.com/luismayta
+.. _`Linkedin`: https://www.linkedin.com/in/luismayta
+.. _`Email`: slovacus@gmail.com
+    :target: mailto:slovacus@gmail.com
+.. _`Twitter`: https://twitter.com/slovacus
+.. _`Website`: http://luismayta.github.io
+.. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
+
+.. |Build Status| image:: https://travis-ci.org/hadenlabs/cookiecutter-docker.svg
+   :target: https://travis-ci.org/hadenlabs/cookiecutter-docker
+.. |GitHub issues| image:: https://img.shields.io/github/issues/hadenlabs/cookiecutter-docker.svg
+   :target: https://github.com/hadenlabs/cookiecutter-docker/issues
+.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
+   :target: LICENSE
+
+.. Team:
+.. |Luis Mayta| image:: https://github.com/luismayta.png?size=100
+   :target: https://github.com/luismayta
+
+.. Footer:
+.. |linkedin| image:: http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png
+   :target: http://pe.linkedin.com/in/luismayta
+.. |beacon| image:: https://ga-beacon.appspot.com/UA-65019326-1/github.com/hadenlabs/cookiecutter-docker/readme
+   :target: https://github.com/hadenlabs/cookiecutter-docker
+.. |made| image:: https://img.shields.io/badge/Made%20with-Python-1f425f.svg
+   :target: http://www.python.org

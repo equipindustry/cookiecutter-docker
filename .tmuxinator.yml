@@ -1,7 +1,6 @@
 # ~/.tmuxinator/cookiecutter-docker.yml
 name: cookiecutter-docker
-root: <%= ENV["PROJECTS"] %>/cookiecutter/cookiecutter-docker
-tmux_options: -2
+root: ./
 # Optional tmux socket
 # socket_name: foo
 
@@ -26,7 +25,7 @@ on_project_exit: make docker.down
 on_project_stop: make docker.down
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: pyenv activate slides-agile
+pre_window: pyenv activate cookiecutter-docker
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf

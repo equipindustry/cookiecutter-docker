@@ -1,5 +1,12 @@
-|Build| |Issues| |License|
+{{ cookiecutter.project_slug }}
+===============================
 
+{{ cookiecutter.short_description }}
+
+Build
+-----
+
+|Build Status| |GitHub issues| |GitHub license|
 
 :Version: {{cookiecutter.version}}
 :Web: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}
@@ -7,82 +14,125 @@
 :Source: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}
 :Keywords: {{cookiecutter.project_name}}
 
+Docker Image:
+-------------
+
+|MicroBadger| |Docker Stars| |Docker Pulls|
 
 .. contents:: Table of Contents:
     :local:
 
-{{cookiecutter.project_name}}
-==============================
-
-{{cookiecutter.short_description}}
-
 Features
 --------
 
+* Task
 
-How to Use
-----------
+Dependencies
+------------
 
+List of applications:
 
-.. code:: bash
+- `Python 3.6.4`_
+- `Docker`_
+- `Docker Compose`_
 
-   >
+Quick Start
+===========
 
+- Fork this repository
 
-Actions
--------
+Usage
+-----
+
+- Install dependences
 
 .. code-block:: bash
 
-  λ make
-      ༼ つ ◕_◕ ༽つ Makefile for {{cookiecutter.project_name}}
+  λ make setup
 
-      Usage:
-          make environment               create environment with pyenv
-          make install                   install dependences python by env
-          make clean                     remove files of build
-          make setup                     install requirements
+- Build images
 
-          Docker:
+.. code-block:: bash
 
-              make docker.build         build all services with docker-compose
-              make docker.down          down services docker-compose
-              make docker.ssh           connect by ssh to container
-              make docker.stop          stop services by env
-              make docker.verify_network           verify network
-              make docker.up             up services of docker-compose
-              make docker.list           list services of docker
+  λ make build version={{version}}
 
-          Tests:
+Support
+-------
 
-              test.lint                  Run all pre-commit
-              test.syntax                Run all syntax in code
+If you want to support this project, i only accept ``IOTA`` :p.
+
+.. code-block:: bash
+
+    Address: FTDCZELEMOQGL9MBWFZENJLFIZUBGMXLFVPRB9HTWYDYPTFKASJCEGJMSAXUWDQC9SJUDMZVIQKACQEEYPEUYLAMMD
+
+
+License
+-------
+
+MIT
 
 Changelog
 ---------
 
-Please see `CHANGELOG <CHANGELOG.rst>`__ for more information what has
-changed recently.
+Please see `CHANGELOG`_ for more information what
+has changed recently.
 
 Contributing
 ------------
 
-Please see `CONTRIBUTING <CONTRIBUTING.rst>`__ for details.
+Contributions are welcome!
 
-Credits
--------
+Review the `CONTRIBUTING`_ for details on how to:
 
-Made with :heart: :coffee: and :pizza: by `{{cookiecutter.company}} <{{cookiecutter.domain_repository}}/{{cookiecutter.company}}>`__
+* Submit issues
+* Submit pull requests
 
--  `All Contributors`_
+Contact Info
+------------
 
-.. |Build| image:: https://travis-ci.org/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}.svg
-   :target: https://travis-ci.org/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}
-.. |Issues| image:: https://img.shields.io/git.osp.pe/issues/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}.svg
-   :target: https://git.osp.pe/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}/issues
-.. |License| image:: https://img.shields.io/git.osp.pe/license/mashape/apistatus.svg?style=flat-square
-   :target: LICENSE
+Feel free to contact me to discuss any issues, questions, or comments.
+
+* `Email`_
+* `Twitter`_
+* `GitHub`_
+* `LinkedIn`_
+* `Website`_
+* `PGP`_
+
+Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 
 .. Links
+.. _`changelog`: CHANGELOG.rst
+.. _`contributors`: AUTHORS
+.. _`contributing`: CONTRIBUTING.rst
 
-.. _`All Contributors`: AUTHORS.rst
+.. _`hadenlabs`: https://github.com/hadenlabs
+.. _`luis mayta`: https://github.com/luismayta
+
+.. _`Github`: https://github.com/luismayta
+.. _`Linkedin`: https://www.linkedin.com/in/luismayta
+.. _`Email`: slovacus@gmail.com
+    :target: mailto:slovacus@gmail.com
+.. _`Twitter`: https://twitter.com/slovacus
+.. _`Website`: http://luismayta.github.io
+.. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
+
+.. |Build Status| image:: https://travis-ci.org/hadenlabs/{{cookiecutter.repo_name}}.svg
+   :target: https://travis-ci.org/hadenlabs/{{cookiecutter.repo_name}}
+.. |GitHub issues| image:: https://img.shields.io/github/issues/hadenlabs/{{cookiecutter.repo_name}}.svg
+   :target: {{cookiecutter.domain_repository}}/hadenlabs/{{cookiecutter.repo_name}}/issues
+.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
+   :target: LICENSE
+
+.. Badges for images hub docker
+.. |MicroBadger| image:: https://images.microbadger.com/badges/image/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}.svg
+   :target: http://microbadger.com/images/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}
+.. |Docker Stars| image:: https://img.shields.io/docker/stars/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}.svg?style=flat-square
+   :target: https://hub.docker.com/r/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}
+.. |Docker Pulls| image:: https://img.shields.io/docker/pulls/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}.svg?style=flat-square
+   :target: https://hub.docker.com/r/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}
+
+.. Dependences:
+.. _Python 3.6.4: https://www.python.org/downloads/release/python-364
+.. _Docker: https://www.docker.com/
+.. _Docker Compose: https://docs.docker.com/compose/

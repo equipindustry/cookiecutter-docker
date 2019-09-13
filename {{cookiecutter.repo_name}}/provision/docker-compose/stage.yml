@@ -1,4 +1,0 @@
-# {{ cookiecutter.project_name }}: Docker Compose
-# https://docs.docker.com/compose/
-#
-# Usage: docker-compose stage up

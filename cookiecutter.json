@@ -1,15 +1,30 @@
 {
-  "company": "OSP",
-  "docker_registry_user": "luismayta",
-  "domain_repository": "https://git.osp.pe",
+  "author_name": "Your name",
+  "company": "Hadenlabs",
+  "docker_hub_user": "luismayta",
+  "docker_name": "python",
+  "domain_repository": "https://github.com",
   "email": "slovacus@gmail.com",
   "full_name": "Luis Mayta",
-  "group_name": "osp",
-  "license": "Mit",
-  "project_name": "name of project",
-  "release_date": "2017-11-17",
+  "group_name": "hadenlabs",
   "repo_name": "docker-name",
+  "repository":[
+    "github",
+    "bitbucket",
+    "gitlab"
+  ],
+  "open_source_license": [
+    "MIT license",
+    "BSD license",
+    "ISC license",
+    "Apache Software License 2.0",
+    "GNU General Public License v3",
+    "Not open source"
+  ],
+  "project_name": "project_name",
+  "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_') }}",
+  "release_date": "2019-11-17",
   "short_description": "Docker Image Name",
   "version": "0.0.0",
-  "year": "2017"
+  "year": "2019"
 }
