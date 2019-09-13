@@ -2,9 +2,6 @@
 # See ./CONTRIBUTING.rst
 #
 
-PATH_DOCKER_COMPOSE:=provision/docker-compose
-DOCKER_TEST := docker-compose -f docker-compose.yml -f "${PATH_DOCKER_COMPOSE}"/test.yml
-
 test.help:
 	@echo '    Test:'
 	@echo ''
@@ -17,15 +14,17 @@ test.help:
 test: clean
 	@echo $(MESSAGE) Running tests on the current Python interpreter with coverage $(END)
 	@if [[ -z "${run}" ]]; then \
-		$(DOCKER_TEST) run --rm app bash -c "python setup.py test";\
+		$(docker-compose) -f ${PATH_DOCKER_COMPOSE}/test.yml run --rm \
+			app bash -c "$(PIPENV_RUN) python setup.py test" ; \
 	fi
 	@if [[ -n "${run}" ]]; then \
-		$(DOCKER_TEST) run --rm app bash -c "pytest tests/${run}";\
+		$(docker-compose) -f ${PATH_DOCKER_COMPOSE}/test.yml run --rm \
+			app bash -c "$(PIPENV_RUN) pytest tests/${run}" ; \
 	fi
 
 test.lint: clean
-	$(docker-compose) -f ${PATH_DOCKER_COMPOSE}/dev.yml \
-		run --rm check bash -c "pre-commit run --all-files --verbose"
+	$(docker-compose) -f ${PATH_DOCKER_COMPOSE}/dev.yml run --rm \
+		app bash -c "$(PIPENV_RUN) pre-commit run --all-files --verbose"
 
 test.syntax: clean
 	@echo $(MESSAGE) Running tests $(END)
