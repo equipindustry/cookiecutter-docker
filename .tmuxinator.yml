@@ -1,6 +1,6 @@
 # ~/.tmuxinator/cookiecutter-docker.yml
 name: cookiecutter-docker
-root: <%= ENV["PROJECTS"] %>/cookiecutter/cookiecutter-docker
+root: ./
 # Optional tmux socket
 # socket_name: foo
 

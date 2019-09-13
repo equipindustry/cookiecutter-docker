@@ -1,4 +1,14 @@
-# {{ cookiecutter.project_name }}: Docker Compose
+# Docker Compose
 # https://docs.docker.com/compose/
 #
 # Usage: test up
+
+version: "3"
+services:
+  app:
+    image: {{ cookiecutter.project_name }}-app-test:{{ version }}
+    environment: &environment
+      - STAGE=testing
+    build:
+      args:
+        stage: test

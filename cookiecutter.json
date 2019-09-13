@@ -1,11 +1,18 @@
 {
   "author_name": "Your name",
   "company": "Hadenlabs",
-  "docker_registry_user": "luismayta",
+  "docker_hub_user": "luismayta",
+  "docker_name": "python",
   "domain_repository": "https://github.com",
   "email": "slovacus@gmail.com",
   "full_name": "Luis Mayta",
   "group_name": "hadenlabs",
+  "repo_name": "docker-name",
+  "repository":[
+    "github",
+    "bitbucket",
+    "gitlab"
+  ],
   "open_source_license": [
     "MIT license",
     "BSD license",
@@ -16,8 +23,7 @@
   ],
   "project_name": "project_name",
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_') }}",
-  "release_date": "2017-11-17",
-  "repo_name": "docker-name",
+  "release_date": "2019-11-17",
   "short_description": "Docker Image Name",
   "version": "0.0.0",
   "year": "2019"

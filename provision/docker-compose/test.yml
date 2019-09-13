@@ -6,7 +6,7 @@
 version: "3"
 services:
   app:
-    image: cookiecutter-docker-app-test:0.0.0
+    image: cookiecutter-docker-app-test
     environment: &environment
       - STAGE=testing
     build:

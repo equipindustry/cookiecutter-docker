@@ -1,7 +1,7 @@
 Contributing
 ============
 
-There are a lot of different ways to contribute to Project. See below for
+There are a lot of different ways to contribute to {{ cookiecutter.project_slug }}. See below for
 everything you can do and the processes to follow for each contribution
 method. Note that no matter how you contribute, your participation is
 governed by our `Code of Conduct <CODE_OF_CONDUCT.rst>`__.
@@ -9,7 +9,7 @@ governed by our `Code of Conduct <CODE_OF_CONDUCT.rst>`__.
 Make changes to code or docs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Fork the project, make a change, and send a pull request! Please have a
+Fork the {{ cookiecutter.project_slug }}, make a change, and send a pull request! Please have a
 look at our `Style
 Guide </docs/source/contributing/style-guide.rst>`__ before
 getting to work. Please make sure the unit and functional tests pass
