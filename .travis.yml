@@ -1,33 +1,31 @@
+---
 language: python
 
-python: 3.7
+python:
+  - 3.8
 
-addons:
-  apt:
-    packages:
-      - docker-ce
+sudo: false
 
 services:
   - docker
 
+# Docker-compose setup
+# https://docs.travis-ci.com/user/docker/
 env:
-  - POETRY_VERSION=0.12.11
+  global:
+    - DOCKER_COMPOSE_VERSION=1.23.2
 
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  - cp -rf .env.example .env
+
+# install dependences
 install:
-  - pip install -U docker-compose
-  - curl -sSL "https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py" | python
-  - source "$HOME/.poetry/env"
-  - docker --version && docker-compose --version && poetry --version
-  - poetry install --no-interaction --no-ansi
+  - pip install -r requirements/setup.txt
 
+# execute test
 script:
-  - flake8 hooks tests
-  - pytest
-  - sh tests/test_integration.sh
-  - poetry check
-  - safety check --bare --full-report
-
-notifications:
-  email:
-    on_success: never
-    on_failure: change
+  - make test
