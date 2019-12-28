@@ -12,20 +12,18 @@ If necessary, describe the problem you have been experiencing in more detail.
 
 ### Environment
 
-* OS: {Please write here}
-* {{cookiecutter.project_name}} version: {Please write here}
+- OS: {Please write here}
+- {{cookiecutter.project_name}} version: {Please write here}
 
 ### Link to Project logs
 
-Create a [snippets](https://gitlab.com/dashboard/snippets) which is a paste of your _full_ Project logs, and link them here. 
-Do _NOT_ paste your full Project logs here, as it will make this issue very long and hard to read! 
+Create a [snippets](https://gitlab.com/dashboard/snippets) which is a paste of your _full_ Project logs, and link them here.
+Do _NOT_ paste your full Project logs here, as it will make this issue very long and hard to read!
 If you are reporting a bug, _always_ include Project logs!
-
 
 ### What is the current bug behavior?
 
 (What actually happens)
-
 
 ### What is the expected correct behavior?
 

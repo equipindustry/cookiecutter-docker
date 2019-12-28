@@ -3,10 +3,10 @@
 #
 # Usage: test up
 
-version: "3"
+version: '3.6'
 services:
   app:
-    image: {{ cookiecutter.project_name }}-app-test:{{ version }}
+    image: {{ cookiecutter.project_slug }}-app-test
     environment: &environment
       - STAGE=testing
     build:

@@ -4,12 +4,12 @@ Briefly describe the issue you are experiencing (or the feature you want to see 
 
 ## Acceptance Tests
 
-* Write here
+- Write here
 
 ## Tasks
 
-* [ ] Task number 1
+- [ ] Task number 1
 
-/label ~Backlog ~Backend 
+/label ~Backlog ~Backend
 /cc @luismayta
 /assign @luismayta
