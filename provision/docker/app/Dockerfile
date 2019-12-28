@@ -25,13 +25,6 @@ WORKDIR /usr/src/
 RUN apt-get update -y \
   && apt-get install -y ${PACKAGES} --no-install-recommends \
 
-  # revolver
-  && curl -L https://raw.githubusercontent.com/molovo/revolver/master/revolver > /usr/local/bin/revolver \
-  && chmod +x /usr/local/bin/revolver \
-  # zunit
-  && curl -L https://github.com/zunit-zsh/zunit/releases/download/v${ZUNIT_VERSION}/zunit > /usr/local/bin/zunit \
-  && chmod +x /usr/local/bin/zunit \
-
   # Permissions
   && groupadd -g 500 -r python \
   && groupadd ${USERNAME} \

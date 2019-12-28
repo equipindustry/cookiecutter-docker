@@ -8,11 +8,7 @@
   "full_name": "Luis Mayta",
   "group_name": "hadenlabs",
   "repo_name": "docker-name",
-  "repository":[
-    "github",
-    "bitbucket",
-    "gitlab"
-  ],
+  "repository": ["github", "bitbucket", "gitlab"],
   "open_source_license": [
     "MIT license",
     "BSD license",
@@ -23,7 +19,7 @@
   ],
   "project_name": "project_name",
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_') }}",
-  "release_date": "2019-11-17",
+  "release_date": "2019-12-27",
   "short_description": "Docker Image Name",
   "version": "0.0.0",
   "year": "2019"

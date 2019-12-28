@@ -10,7 +10,7 @@ Cookiecutter Docker
 :Keywords: cookiecutter-docker
 
 .. contents:: Table of Contents:
-    :local:
+   :local:
 
 Features
 --------
@@ -37,7 +37,7 @@ Usage
 
 .. code-block:: bash
 
-  λ make setup
+   λ make setup
 
 Support
 -------
@@ -46,7 +46,7 @@ If you want to support this project, i only accept ``IOTA`` :p.
 
 .. code-block:: bash
 
-    Address: FTDCZELEMOQGL9MBWFZENJLFIZUBGMXLFVPRB9HTWYDYPTFKASJCEGJMSAXUWDQC9SJUDMZVIQKACQEEYPEUYLAMMD
+   Address: FTDCZELEMOQGL9MBWFZENJLFIZUBGMXLFVPRB9HTWYDYPTFKASJCEGJMSAXUWDQC9SJUDMZVIQKACQEEYPEUYLAMMD
 
 
 Team
@@ -107,7 +107,7 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 .. _`Github`: https://github.com/luismayta
 .. _`Linkedin`: https://www.linkedin.com/in/luismayta
 .. _`Email`: slovacus@gmail.com
-    :target: mailto:slovacus@gmail.com
+   :target: mailto:slovacus@gmail.com
 .. _`Twitter`: https://twitter.com/slovacus
 .. _`Website`: http://luismayta.github.io
 .. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
