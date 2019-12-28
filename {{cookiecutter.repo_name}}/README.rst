@@ -36,7 +36,6 @@ List of applications:
 - `Pyenv`_
 - `Docker`_
 
-
 Quick Start
 ===========
 
@@ -49,13 +48,14 @@ Usage
 
 .. code-block:: bash
 
-   λ make setup
+  λ make setup
 
 - Build images
 
 .. code-block:: bash
 
-   λ make build version={{version}}
+  λ make hub.build version={{version}}
+
 
 Support
 -------
@@ -102,19 +102,19 @@ Feel free to contact me to discuss any issues, questions, or comments.
 
 Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 
-.. Links
+.. links:
+
 .. _`changelog`: CHANGELOG.rst
-.. _`contributors`: AUTHORS
+.. _`contributors`: docs/source/AUTHORS.rst
 .. _`contributing`: docs/source/CONTRIBUTING.rst
 
 .. _`hadenlabs`: https://github.com/hadenlabs
 .. _`luis mayta`: https://github.com/luismayta
 
-
 .. _`Github`: https://github.com/luismayta
 .. _`Linkedin`: https://www.linkedin.com/in/luismayta
 .. _`Email`: slovacus@gmail.com
-   :target: mailto:slovacus@gmail.com
+    :target: mailto:slovacus@gmail.com
 .. _`Twitter`: https://twitter.com/slovacus
 .. _`Website`: http://luismayta.github.io
 .. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc

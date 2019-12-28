@@ -4,22 +4,22 @@ MAINTAINER {{cookiecutter.full_name}} {{cookiecutter.email}}
 ARG stage
 
 LABEL NAME {{ cookiecutter.project_slug }}
-LABEL VERSION {{ cookiecutter.version }}
 
 ENV USERNAME developer
 
 ENV PACKAGES bash \
-        build-base \
-        git \
-        gcc \
-        libc-dev \
-        libmagic \
-        linux-headers \
-        make \
-        musl-dev \
-        openssl \
-        pcre-dev \
-        zlib-dev
+  git \
+  curl \
+  wget \
+  gcc \
+  libc-dev \
+  make \
+  musl-dev \
+  openssl \
+  gcc \
+  libgdal20 \
+  libev-dev
+
 
 COPY Pipfile* /usr/src/
 
