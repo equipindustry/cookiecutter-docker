@@ -1,11 +1,12 @@
-FROM python:3.6.4-alpine
+FROM python:3.8.0-slim
 
 MAINTAINER {{cookiecutter.full_name}} {{cookiecutter.email}}
-
 ARG stage
 
-LABEL NAME {{ cookiecutter.project_name }}
+LABEL NAME {{ cookiecutter.project_slug }}
 LABEL VERSION {{ cookiecutter.version }}
+
+ENV USERNAME developer
 
 ENV PACKAGES bash \
         build-base \
@@ -20,11 +21,29 @@ ENV PACKAGES bash \
         pcre-dev \
         zlib-dev
 
-COPY ./requirements/ /usr/src/requirements/
-COPY ./requirements.txt /usr/src/requirements.txt
+COPY Pipfile* /usr/src/
 
 # set working directory to /usr/src/
 WORKDIR /usr/src/
 
-RUN apk add --no-cache --update $PACKAGES && \
-  pip install -r /usr/src/requirements/$stage.txt
+RUN apt-get update -y \
+        && apt-get install -y ${PACKAGES} --no-install-recommends \
+        # Permissions
+        && groupadd -g 500 -r python \
+        && groupadd ${USERNAME} \
+        && useradd -m -g ${USERNAME} -G python ${USERNAME} \
+        && chown -R ${USERNAME}:python /usr/local/bin \
+        && su ${USERNAME} \
+        && mkdir -p /usr/src \
+        && chown -R ${USERNAME} /usr/src \
+
+        # python
+        && pip3 install pipenv \
+        && pipenv install --dev --skip-lock \
+        && pipenv shell --fancy \
+
+        # clean
+        && apt-get clean \
+        && apt-get autoremove \
+        && apt-get purge \
+        && rm -rf /var/lib/apt/lists/*
