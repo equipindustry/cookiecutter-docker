@@ -14,10 +14,9 @@ test.help:
 test:
 	@echo $(MESSAGE) Running tests on the current Python interpreter with coverage $(END)
 	@if [ -z "${run}" ]; then \
-		$(docker-test-run) bash -c "$(PIPENV_RUN) pytest"
-	fi
-	@if [ -n "${run}" ]; then \
-		$(docker-test-run) bash -c "$(PIPENV_RUN) pytest tests/${run}"
+		$(docker-test-run) bash -c "$(PIPENV_RUN) pytest"; \
+	elif [ -n "${run}" ]; then \
+		$(docker-test-run) bash -c "$(PIPENV_RUN) pytest tests/${run}"; \
 	fi
 
 test.lint:
