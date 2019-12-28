@@ -67,12 +67,8 @@ help:
 	@make alias.help
 	@make docker.help
 	@make docs.help
+	@make hub.help
 	@make test.help
-
-build:
-	docker build --no-cache --build-arg version=${version} -t hadenlabs/hugo:${version} -f Dockerfile .
-	docker login
-	docker push hadenlabs/hugo:${version}
 
 setup:
 	@echo "=====> install packages..."
