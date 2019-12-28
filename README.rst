@@ -120,16 +120,18 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
    :target: LICENSE
 
 .. Team:
+
 .. |Luis Mayta| image:: https://github.com/luismayta.png?size=100
-   :target: https://github.com/luismayta
+    :target: https://github.com/luismayta
 
 .. Footer:
+
 .. |linkedin| image:: http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png
-   :target: http://pe.linkedin.com/in/luismayta
+    :target: http://pe.linkedin.com/in/luismayta
 .. |beacon| image:: https://ga-beacon.appspot.com/UA-65019326-1/github.com/hadenlabs/cookiecutter-docker/readme
-   :target: https://github.com/hadenlabs/cookiecutter-docker
+    :target: https://github.com/hadenlabs/cookiecutter-docker
 .. |made| image:: https://img.shields.io/badge/Made%20with-Python-1f425f.svg
-   :target: http://www.python.org
+    :target: http://www.python.org
 
 .. Dependences:
 

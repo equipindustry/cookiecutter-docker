@@ -20,6 +20,7 @@ endif
 TEAM := {{ cookiecutter.group_name }}
 PROJECT := {{ cookiecutter.repo_name }}
 PROJECT_PORT := 8000
+
 PYTHON_VERSION=3.8.0
 PYENV_NAME="${PROJECT}"
 
@@ -44,6 +45,8 @@ PATH_DOCKER_COMPOSE:=docker-compose.yml -f provision/docker-compose
 DOCKER_SERVICE_DEV:=app
 DOCKER_SERVICE_TEST:=app
 
+docker-build:= docker build --quiet -t
+docker-push:= docker push
 docker-compose:=$(PIPENV_RUN) docker-compose
 
 docker-test:=$(docker-compose) -f ${PATH_DOCKER_COMPOSE}/test.yml
@@ -60,14 +63,13 @@ help:
 	@echo '${MESSAGE} Makefile for ${PROJECT}'
 	@echo ''
 	@echo 'Usage:'
-	@echo '    build                     Image docker with {version}'
 	@echo '    environment               create environment with pyenv'
 	@echo '    setup                     install requirements'
 	@echo ''
 	@make alias.help
+	@make hub.help
 	@make docker.help
 	@make docs.help
-	@make hub.help
 	@make test.help
 
 setup:
