@@ -21,7 +21,7 @@ Docker Image:
 |MicroBadger| |Docker Stars| |Docker Pulls|
 
 .. contents:: Table of Contents:
-   :local:
+    :local:
 
 Features
 --------
