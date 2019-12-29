@@ -9,11 +9,6 @@ LABEL NAME cookiecutter-docker-app-$stage
 ENV USERNAME developer
 
 ENV PACKAGES bash \
-  git \
-  gcc \
-  libc-dev \
-  make \
-  musl-dev \
   openssl
 
 
