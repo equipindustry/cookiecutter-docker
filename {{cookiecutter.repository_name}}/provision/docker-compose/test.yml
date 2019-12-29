@@ -6,9 +6,11 @@
 version: '3.6'
 services:
   app:
-    image: {{ cookiecutter.project_slug }}-app-test
+    image: {{ cookiecutter.repository_name }}-app-test
     environment: &environment
       - STAGE=testing
     build:
       args:
         stage: test
+    volumes:
+      - .:/usr/src

@@ -17,11 +17,12 @@ else
 	PIPENV_INSTALL:=
 endif
 
-TEAM := {{ cookiecutter.group_name }}
-PROJECT := {{ cookiecutter.repo_name }}
-PROJECT_PORT := 8000
+TEAM := {{ cookiecutter.repository_owner }}
+AWS_VAULT ?= {{ cookiecutter.aws_vault }}
+PROJECT := {{ cookiecutter.repository_name }}
+PROJECT_PORT := {{ cookiecutter.project_port }}
 
-PYTHON_VERSION=3.8.0
+PYTHON_VERSION={{ cookiecutter.python_version }}
 PYENV_NAME="${PROJECT}"
 
 # Configuration.
@@ -47,8 +48,8 @@ DOCKER_SERVICE_TEST:=app
 
 # docker settings
 
-PARENT_IMAGE := python
-IMAGE := equipindustry/python
+PARENT_IMAGE := {{ cookiecutter.docker_image_parent }}
+IMAGE := {{ cookiecutter.docker_hub_username }}/{{ cookiecutter.docker_image_name }}
 VERSION ?= latest
 
 docker-build:= docker build --quiet -t
@@ -84,10 +85,10 @@ setup:
 	$(PIPENV_RUN) pre-commit install
 	$(PIPENV_RUN) pre-commit install -t pre-push
 	@cp -rf provision/git/hooks/prepare-commit-msg .git/hooks/
-	@[[ -e ".env" ]] || cp -rf .env.example .env
+	@[ -e ".env" ] || cp -rf .env.example .env
 	@echo ${MESSAGE_HAPPY}
 
 environment:
 	@echo "=====> loading virtualenv ${PYENV_NAME}..."
-	@pipenv --venv || $(PIPENV_INSTALL) --skip-lock --python=${PYTHON_VERSION}
+	@pipenv --venv || $(PIPENV_INSTALL) --python=${PYTHON_VERSION} --skip-lock
 	@echo ${MESSAGE_HAPPY}
