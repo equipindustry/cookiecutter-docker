@@ -119,7 +119,7 @@ Made with :heart: :coffee: and :pizza: by `luismayta`_.
 .. |Build Status| image:: https://travis-ci.org/hadenlabs/{{cookiecutter.repository_name}}.svg
    :target: https://travis-ci.org/hadenlabs/{{cookiecutter.repository_name}}
 .. |GitHub issues| image:: https://img.shields.io/github/issues/hadenlabs/{{cookiecutter.repository_name}}.svg
-   :target: {{cookiecutter.domain_repository}}/hadenlabs/{{cookiecutter.repository_name}}/issues
+   :target: {{cookiecutter.repository_domain}}/hadenlabs/{{cookiecutter.repository_name}}/issues
 .. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
    :target: LICENSE
 
