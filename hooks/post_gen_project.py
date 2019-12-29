@@ -6,9 +6,8 @@ import os
 import random
 import string
 
-
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
-DOCKER_FILES = ("Dockerfile", ".dockerignore", "docker-compose.yml")
+DOCKER_FILES = (".dockerignore", "docker-compose.yml")
 
 
 def generate_random_string(
@@ -36,33 +35,7 @@ def remove_file(filepath):
     os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
 
 
-def set_cookie_secret(project_directory):
-    """
-    Open the settings and generate a secure cookie secret.
-
-    :param str project_directory: Path of the project directory.
-    """
-    project_settings_file = os.path.join(project_directory, "settings.py")
-    with open(project_settings_file) as f:
-        file_ = f.read()
-    file_ = file_.replace("!!CHANGEME!!", generate_random_string())
-    with open(project_settings_file, "w") as f:
-        f.write(file_)
-
-
 if __name__ == "__main__":
     if "{{ cookiecutter.use_docker }}".lower() in ("n", "no"):
         for filename in DOCKER_FILES:
             remove_file(filename)
-
-    if "{{ cookiecutter.use_bumpversion }}".lower() in ("n", "no"):
-        remove_file(".bumpversion.cfg")
-
-    if "{{ cookiecutter.use_tox }}".lower() in ("n", "no"):
-        remove_file("tox.ini")
-
-    if "{{ cookiecutter.use_pytest }}".lower() in ("n", "no"):
-        remove_file("pytest.ini")
-
-    # Replace the cookie secret
-    set_cookie_secret(PROJECT_DIRECTORY)
