@@ -13,7 +13,7 @@ If necessary, describe the problem you have been experiencing in more detail.
 ### Environment
 
 - OS: {Please write here}
-- {{cookiecutter.project_name}} version: {Please write here}
+- {{cookiecutter.repository_name}} version: {Please write here}
 
 ### Link to Project logs
 
