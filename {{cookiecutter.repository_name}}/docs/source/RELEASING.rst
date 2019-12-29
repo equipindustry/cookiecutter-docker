@@ -27,14 +27,14 @@ Check sintax code:
 Bump a new version
 ------------------
 
-Make a new version of docker-python in the following steps:
+Make a new version of {{ cookiecutter.repository_name }} in the following steps:
 
 * Make sure everything is commit to github.com.
 * Update ``Changelog.rst`` with the next version.
 
 .. code-block:: sh
 
-   $ bumplus -v $VERSION
+    bumplus -v $VERSION
 
 * Dry Run: ``bumpversion --dry-run --verbose --new-version 0.8.1 patch``
 * Do it: ``bumpversion --new-version 0.8.1 patch``

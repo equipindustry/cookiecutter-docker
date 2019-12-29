@@ -4,7 +4,7 @@ Authors
 Leads
 =====
 
-- {{cookiecutter.author_name}} {{ cookiecutter.email }}
+- {{cookiecutter.author_name}} {{ cookiecutter.author_email }}
 
 Contributors (chronological)
 ============================
