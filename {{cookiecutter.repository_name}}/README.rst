@@ -1,19 +1,14 @@
-{{ cookiecutter.project_slug }}
-===============================
+{{ cookiecutter.repository_name }}
+==================================
 
-{{ cookiecutter.short_description }}
-
-
-Build:
-------
-
-|Build Status| |GitHub issues| |GitHub license|
+{{ cookiecutter.project_description }}
 
 :Version: {{cookiecutter.version}}
-:Web: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}
-:Download: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}
-:Source: {{cookiecutter.domain_repository}}/{{cookiecutter.group_name}}/{{cookiecutter.repo_name}}
-:Keywords: {{cookiecutter.project_name}}
+:Web: {{cookiecutter.repository_domain}}/{{cookiecutter.repository_owner}}/{{cookiecutter.repository_name}}
+:Download: {{cookiecutter.repository_domain}}/{{cookiecutter.repository_owner}}/{{cookiecutter.repository_name}}
+:Source: {{cookiecutter.repository_domain}}/{{cookiecutter.repository_owner}}/{{cookiecutter.repository_name}}
+:Keywords: {{cookiecutter.repository_name}}
+
 
 Docker Image:
 -------------
@@ -36,39 +31,40 @@ List of applications:
 - `Pyenv`_
 - `Docker`_
 
-Quick Start
-===========
 
-- Fork this repository
+Quickstart
+----------
 
-Usage
------
+Project Start
+^^^^^^^^^^^^^
 
-- Install dependences
+.. code:: bash
 
-.. code-block:: bash
+    $ make environment
+    $ make setup
 
-  λ make setup
+Start Application
+^^^^^^^^^^^^^^^^^
 
-- Build images
+.. code:: bash
 
-.. code-block:: bash
+    $ make yarn.start
 
-  λ make hub.build version={{version}}
+Troubleshooting
+---------------
 
+Wrong pre-commit with pyenv
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Support
--------
+Execute the next:
 
-If you want to support this project, i only accept ``IOTA`` :p.
+.. code:: bash
 
-.. code-block:: bash
-
-   Address: FTDCZELEMOQGL9MBWFZENJLFIZUBGMXLFVPRB9HTWYDYPTFKASJCEGJMSAXUWDQC9SJUDMZVIQKACQEEYPEUYLAMMD
+    pyenv shell {{ cookiecutter.python_version }}
 
 
 License
--------
+=======
 
 MIT
 
@@ -79,37 +75,38 @@ Please see `CHANGELOG`_ for more information what
 has changed recently.
 
 Contributing
-------------
+============
 
-Contributions are welcome!
+Please see `CONTRIBUTING`_ for details.
 
-Review the `CONTRIBUTING`_ for details on how to:
 
-* Submit issues
-* Submit pull requests
+Versioning
+----------
 
-Contact Info
-------------
+Releases are managed using {{ cookiecutter.repository }} release feature.
+We use [Semantic Versioning](http://semver.org) for all
+the releases. Every change made to the code base will be referred to in the release notes (except for
+cleanups and refactorings).
 
-Feel free to contact me to discuss any issues, questions, or comments.
+Credits
+-------
 
-* `Email`_
-* `Twitter`_
-* `GitHub`_
-* `LinkedIn`_
-* `Website`_
-* `PGP`_
+-  `CONTRIBUTORS`_
 
-Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
+Made with :heart: :coffee: and :pizza: by `luismayta`_.
 
-.. links:
+.. |license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
+    :target: LICENSE
+    :alt: License
 
-.. _`changelog`: CHANGELOG.rst
-.. _`contributors`: docs/source/AUTHORS.rst
-.. _`contributing`: docs/source/CONTRIBUTING.rst
+.. Links
+.. _`CHANGELOG`: CHANGELOG.rst
+.. _`CONTRIBUTORS`: docs/source/AUTHORS.rst
+.. _`CONTRIBUTING`: docs/source/CONTRIBUTING.rst
+.. _`LICENSE`: LICENSE
 
 .. _`hadenlabs`: https://github.com/hadenlabs
-.. _`luis mayta`: https://github.com/luismayta
+.. _`luismayta`: https://github.com/luismayta
 
 .. _`Github`: https://github.com/luismayta
 .. _`Linkedin`: https://www.linkedin.com/in/luismayta
@@ -119,10 +116,10 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 .. _`Website`: http://luismayta.github.io
 .. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
 
-.. |Build Status| image:: https://travis-ci.org/hadenlabs/{{cookiecutter.repo_name}}.svg
-   :target: https://travis-ci.org/hadenlabs/{{cookiecutter.repo_name}}
-.. |GitHub issues| image:: https://img.shields.io/github/issues/hadenlabs/{{cookiecutter.repo_name}}.svg
-   :target: {{cookiecutter.domain_repository}}/hadenlabs/{{cookiecutter.repo_name}}/issues
+.. |Build Status| image:: https://travis-ci.org/hadenlabs/{{cookiecutter\.repository_name}}.svg
+   :target: https://travis-ci.org/hadenlabs/{{cookiecutter\.repository_name}}
+.. |GitHub issues| image:: https://img.shields.io/github/issues/hadenlabs/{{cookiecutter\.repository_name}}.svg
+   :target: {{cookiecutter.domain_repository}}/hadenlabs/{{cookiecutter\.repository_name}}/issues
 .. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
    :target: LICENSE
 
