@@ -124,12 +124,12 @@ Made with :heart: :coffee: and :pizza: by `luismayta`_.
    :target: LICENSE
 
 .. Badges for images hub docker
-.. |MicroBadger| image:: https://images.microbadger.com/badges/image/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}.svg
-   :target: http://microbadger.com/images/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}
-.. |Docker Stars| image:: https://img.shields.io/docker/stars/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}.svg?style=flat-square
-   :target: https://hub.docker.com/r/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}
-.. |Docker Pulls| image:: https://img.shields.io/docker/pulls/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}.svg?style=flat-square
-   :target: https://hub.docker.com/r/{{cookiecutter.docker_hub_user}}/{{cookiecutter.docker_name}}
+.. |MicroBadger| image:: https://images.microbadger.com/badges/image/{{cookiecutter.docker_hub_username}}/{{cookiecutter.docker_name}}.svg
+   :target: http://microbadger.com/images/{{cookiecutter.docker_hub_username}}/{{cookiecutter.docker_name}}
+.. |Docker Stars| image:: https://img.shields.io/docker/stars/{{cookiecutter.docker_hub_username}}/{{cookiecutter.docker_name}}.svg?style=flat-square
+   :target: https://hub.docker.com/r/{{cookiecutter.docker_hub_username}}/{{cookiecutter.docker_name}}
+.. |Docker Pulls| image:: https://img.shields.io/docker/pulls/{{cookiecutter.docker_hub_username}}/{{cookiecutter.docker_name}}.svg?style=flat-square
+   :target: https://hub.docker.com/r/{{cookiecutter.docker_hub_username}}/{{cookiecutter.docker_name}}
 
 .. Dependences:
 
