@@ -1,7 +1,7 @@
 {
   "author_email": "slovacus@gmail.com",
   "author_name": "Luis Mayta",
-  "aws_vault": "hadenlabs",
+  "aws_vault": "equipindustry",
   "docker_hub_username": "luismayta",
   "docker_image_name": "python",
   "docker_image_parent": "python",
@@ -12,7 +12,7 @@
   "release_date": "2019-12-27",
   "repository_domain": "https://github.com",
   "repository_name": "docker-python",
-  "repository_owner": "hadenlabs",
+  "repository_owner": "equipindustry",
   "repository": ["github", "bitbucket", "gitlab"],
   "use_docker": "true",
   "version": "0.0.0",
